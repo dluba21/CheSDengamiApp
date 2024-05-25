@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="?attr/actionBarSize"
+    tools:context=".ui.SaveEventFragment"
+    >
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/event_name_text_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter event name..."
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="32dp"
+        app:errorEnabled="false"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/event_name_text_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/save_event_button"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+
+        android:text="Save"
+        app:layout_constraintTop_toBottomOf="@id/event_name_text_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="32dp"
+
+
+        />
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+
+        android:text="Cancel"
+        app:layout_constraintTop_toBottomOf="@id/event_name_text_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="32dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

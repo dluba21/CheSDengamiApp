@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/eventListFragment">
+
+    <fragment
+        android:id="@+id/eventListFragment"
+        android:name="com.example.chesdengami.ui.EventListFragment"
+        android:label="@string/event_list_title"
+        tools:layout="@layout/fragment_event_list">
+        <action
+            android:id="@+id/action_eventListFragment_to_saveEventFragment"
+            app:destination="@id/saveEventFragment" />
+        <action
+            android:id="@+id/action_eventListFragment_to_memberListFragment"
+            app:destination="@id/memberListFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/saveEventFragment"
+        android:name="com.example.chesdengami.ui.SaveEventFragment"
+        android:label="@string/add_event_title"
+        tools:layout="@layout/fragment_save_event" >
+        <argument
+            android:name="eventId"
+            app:argType="long"
+            />
+        <argument
+            android:name="isNewItem"
+            app:argType="boolean"
+            />
+    </fragment>
+
+
+
+
+
+
+
+    <fragment
+        android:id="@+id/memberListFragment"
+        android:name="com.example.chesdengami.ui.MemberListFragment"
+        android:label="@string/member_list_title" >
+        <action
+            android:id="@+id/action_memberListFragment_to_addMemberFragment"
+            app:destination="@id/addMemberFragment" />
+        <argument
+            android:name="eventId"
+            app:argType="long"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/addMemberFragment"
+        android:name="com.example.chesdengami.ui.AddMemberFragment"
+        android:label="AddMemberFragment" />
+</navigation>
